@@ -48,7 +48,7 @@ export function writeEvent(basePath, event) {
         log.warn(e.message)
     }
 
-    if (sourceMap) {
+    if (sourceMap && sourceMap.sources) {
       var mapPath = projectFile + '.map'
       var suffix
       if (fileType === 'js')
